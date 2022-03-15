@@ -34,7 +34,7 @@ class Main
   def list(num)
     case num
     when 1
-
+      list_books
     when 2
       
     when 3
@@ -44,21 +44,21 @@ class Main
     when 5
       
     when 6
-
+      list_labels
     when 7
-      
+    
     when 8
       
     when 9
       
     when 10
-      
+      add_book
     when 11
       
     when 12
 
     when 13
-
+      add_label
     end
   end
 end

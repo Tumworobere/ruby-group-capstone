@@ -1,8 +1,10 @@
 require_relative './item'
+require_relative 'store'
+require_relative 'creation'
 
 class Main
   def initialize
-    @items = Item.new(1, '12 / 12 / 22')
+    @items = Item.new('12 / 12 / 22')
   end
 
   def run
@@ -13,6 +15,7 @@ class Main
       menu
       option = gets.chomp
       break if option == '14'
+      list(option)
     end
 
     puts 'Thank you for using our Library!'
@@ -20,21 +23,43 @@ class Main
 
   def menu
     puts
-    puts 'Please choose an option by entering a number'
-    puts '1 - List all books'
-    puts '2 - List all music albums'
-    puts '3 - List all movies'
-    puts '4 - List all games'
-    puts '5 - List all genre (eg.: Comedy, Thriller)'
-    puts '6 - List all labels (eg.: Gift, New)'
-    puts '7 - List all authors (e.g. Stephen King)'
-    puts "8 - List all sources (e.g. 'From a friend', 'Online shop')"
-    puts '9 - List all labes'
-    puts '10 - Add a book'
-    puts '11 - Add a music album'
-    puts '12 - Add a movie'
-    puts '13 - Add a game'
-    puts '14 - Exit'
+    puts 'Please choose an option by entering a number', '1 - List all books', '2 - List all music albums',
+    '3 - List all movies', '4 - List all games', '5 - List all genre (eg.: Comedy, Thriller)',
+    '6 - List all labels (eg.: Gift, New)', '7 - List all authors (e.g. Stephen King)', 
+    "8 - List all sources (e.g. 'From a friend', 'Online shop')", '9 - List all labes', 
+    '10 - Add a book', '11 - Add a music album', '12 - Add a movie', '13 - Add a game', 
+    '14 - Exit'
+  end
+
+  def list(num)
+    case num
+    when 1
+
+    when 2
+      
+    when 3
+      
+    when 4
+      
+    when 5
+      
+    when 6
+
+    when 7
+      
+    when 8
+      
+    when 9
+      
+    when 10
+      
+    when 11
+      
+    when 12
+
+    when 13
+
+    end
   end
 end
 

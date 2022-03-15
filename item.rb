@@ -12,13 +12,7 @@ class Item
     @achived = false
   end
 
-  def self.can_be_achived?
+  def self.can_be_achived?; end
 
-  end
-
-  def move_to_achive
-
-  end
-
+  def move_to_achive; end
 end
-

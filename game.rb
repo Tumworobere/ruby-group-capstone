@@ -1,24 +1,16 @@
 require './item.rb'
+require 'date'
 
 class Game < Item
   attr_accessor :multiplayer, :last_played_at
-  def initialize(multiplayer, last_played_at, publish_date)
-    super(publish_date)
+
+  def initialize(multiplayer, last_played_at)
     @multiplayer = multiplayer
-    @last_played_at = last_played_at
+    @last_played_at = Date.parse(last_played_at)
   end
-  def hey
-    can_be_archived?
-  end
-private
- def can_be_archived?
-  super && years_between_date(Time.now, @last_played_at) > 2
- end
 
-  def years_between_date(start_date, end_date)
-    (start_date.to_i - end_date.to_i) / ( 24 * 60 * 60 * 365 )
-  end
+  private
+    def can_be_archived?
+     super && ( Time.now.year - @last_played_at.year > 2 )
+    end
 end
-
-noew = Game.new(true, "2018/1/1", "2022/1/1")
-puts noew.hey

@@ -37,13 +37,13 @@ class Main
     when 1
 
     when 2
-
+store.List all music albums
     when 3
 
     when 4
 
     when 5
-
+store.List all genre (eg.: Comedy, Thriller)
     when 6
 
     when 7

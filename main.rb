@@ -37,13 +37,13 @@ class Main
     when 1
 
     when 2
-store.List all music albums
+      store.List_albums
     when 3
 
     when 4
 
     when 5
-store.List all genre (eg.: Comedy, Thriller)
+      store.List_genre
     when 6
 
     when 7
@@ -55,7 +55,7 @@ store.List all genre (eg.: Comedy, Thriller)
     when 10
 
     when 11
-
+      store.list_Add a music album
     when 12
 
     when 13

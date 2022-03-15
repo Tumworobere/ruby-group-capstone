@@ -15,4 +15,4 @@ class Store
         @genres.each do |genre|
           puts "Name: #{genre.name}"
         end
-      end
+    end

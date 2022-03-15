@@ -1,6 +1,6 @@
-require_relative './item'
-require_relative 'store'
-require_relative 'creation'
+require './item'
+require './store'
+require './creation'
 
 class Main
   def initialize
@@ -32,7 +32,7 @@ class Main
   end
 
   def list(num)
-    case num
+    case num.to_i
     when 1
 
     when 2
@@ -40,7 +40,7 @@ class Main
     when 3
       
     when 4
-      
+      Store.list_all_games
     when 5
       
     when 6
@@ -58,7 +58,7 @@ class Main
     when 12
 
     when 13
-
+      Creation.create_a_game
     end
   end
 end

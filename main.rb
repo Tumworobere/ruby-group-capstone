@@ -46,7 +46,7 @@ class Main
     when 6
 
     when 7
-      
+      Store.list_all_authors
     when 8
       
     when 9

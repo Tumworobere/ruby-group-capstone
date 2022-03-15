@@ -25,4 +25,10 @@ class Store
     all_games = read_convert('game.json')
     all_games.each { |game| puts "Multiplayer: \"#{game['multiplayer']}\" Last playing date: #{game['last_played_at']}" }
   end
+
+  def self.list_all_authors
+    Helper.create_file_if_not_exist('author.json')
+    all_games = read_convert('author.json')
+    all_games.each { |author| puts "Id: \"#{author['id']}\" | Full name: #{author['first_name']} #{author['last_name']} | number of items: #{author['items'].length}" }
+  end
 end

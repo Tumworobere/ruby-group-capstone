@@ -1,0 +1,1 @@
+[{ "id" : 1, "first_name": "Stephen", "last_name": "King", "items": []}, { "id" : 10, "first_name": "Robert", "last_name": "Cecil", "items": [{ "id" : 20, "publish_date": "2008-08-1"}, { "id" : 21, "publish_date": "1998-03-21"}]}, { "id" : 100, "first_name": "Eric", "last_name": "Evans", "items": [{ "id" : 200, "publish_date": "2003-01-1"}]}]

@@ -1,10 +1,10 @@
-require_relative '../label'
+require_relative './label'
 require 'json'
 require 'date'
 
 module LabelsController
   def load_labels
-    file = './data_files/labels.json'
+    file = './labels.json'
     data = []
     if File.exist?(file) && File.read(file) != ''
       JSON.parse(File.read(file)).each do |element|
@@ -21,6 +21,6 @@ module LabelsController
     @labels.each do |label|
       data.push({ title: label.title })
     end
-    open('./data_files/labels.json', 'w') { |f| f << JSON.generate(data) }
+    open('./labels.json', 'w') { |f| f << JSON.generate(data) }
   end
 end

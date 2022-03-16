@@ -1,6 +1,6 @@
-require_relative './item'
-require_relative 'store'
-require_relative 'creation'
+require './item'
+require './store'
+require './creation'
 
 class Main
   def initialize
@@ -33,33 +33,47 @@ class Main
   end
 
   def list(num)
-    case num
+    case num.to_i
     when 1
-      Store.list_books
+      puts '1 your methods'
     when 2
-
+      puts '2 your methods'
     when 3
-
+      puts '3 your methods'
     when 4
+      puts '4 your methods'
+    else
+      second_list(num)
+    end
+  end
 
+  def second_list(num)
+    case num.to_i
     when 5
-
+      puts '5 your methods'
     when 6
-      Store.list_labels
+      puts '6 your methods'
     when 7
-
+      puts '7 your methods'
     when 8
+      puts '8 your methods'
+    else
+      third_list(num)
+    end
+  end
 
+  def third_list(num)
+    case num.to_i
     when 9
-
+      puts '9 your methods'
     when 10
-      Store.add_book
+      puts '10 your methods'
     when 11
-
+      puts '11 your methods'
     when 12
-
+      puts '12 your methods'
     when 13
-      Store.add_label
+      puts '13 your methods'
     end
   end
 end

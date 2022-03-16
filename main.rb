@@ -41,7 +41,7 @@ class Main
     when 3
       puts '3 your methods'
     when 4
-      puts '4 your methods'
+      Store.list_all_games
     else
       second_list(num)
     end
@@ -54,7 +54,7 @@ class Main
     when 6
       puts '6 your methods'
     when 7
-      puts '7 your methods'
+      Store.list_all_authors
     when 8
       puts '8 your methods'
     else
@@ -73,7 +73,7 @@ class Main
     when 12
       puts '12 your methods'
     when 13
-      puts '13 your methods'
+      Creation.create_a_game
     end
   end
 end

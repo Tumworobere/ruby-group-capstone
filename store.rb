@@ -2,6 +2,7 @@ require 'json'
 require './helper'
 
 class Store
+<<<<<<< HEAD
   def self.read_convert(filename)
     JSON.parse(File.read(filename))
   end
@@ -32,3 +33,6 @@ class Store
     all_games.each { |author| puts "Id: \"#{author['id']}\" | Full name: #{author['first_name']} #{author['last_name']} | number of items: #{author['items'].length}" }
   end
 end
+=======
+end
+>>>>>>> development

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require './game'
 require './store'
 
@@ -16,3 +17,7 @@ class Creation
     success("game")
   end
 end
+=======
+class Creation
+end
+>>>>>>> development

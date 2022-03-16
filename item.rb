@@ -8,7 +8,11 @@ class Item
     @publish_date = Date.parse(publish_date)
     @archived = false
   end
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> development
   def add_genre(genre)
     @genre = genre
     genre.items << self
@@ -37,5 +41,5 @@ class Item
 
   def can_be_archived?
     Time.now.year - @publish_date.year > 10
-  end  
+  end
 end

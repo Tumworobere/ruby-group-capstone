@@ -25,6 +25,9 @@ class Store
     puts 'There are no labels yet!' if @labels.empty?
     labels.each do |label|
       puts "Label name: #{label.title}"
+    end
+  end
+
   def self.push(item)
     case item.class.name
     when 'Game'

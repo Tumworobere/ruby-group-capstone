@@ -29,9 +29,10 @@ class Creation
   def add_label
     print 'Create Label:'
     title = gets.chomp
-
     @labels.push(Label.new(title))
     puts 'Label created successfully'
+  end
+
   def self.create_a_game
     print 'multiplayer'
     multiplayer = gets.chomp

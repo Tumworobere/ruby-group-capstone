@@ -1,6 +1,6 @@
-require_relative './item'
-require_relative 'store'
-require_relative 'creation'
+require './item'
+require './store'
+require './creation'
 
 class Main
   def initialize
@@ -33,33 +33,47 @@ class Main
   end
 
   def list(num)
-    case num
+    case num.to_i
     when 1
-
+      puts '1 your methods'
     when 2
-      store.List_albums
+      puts '2 your methods'
     when 3
-
+      puts '3 your methods'
     when 4
+      puts '4 your methods'
+    else
+      second_list(num)
+    end
+  end
 
+  def second_list(num)
+    case num.to_i
     when 5
-      store.List_genre
+      puts '5 your methods'
     when 6
-
+      puts '6 your methods'
     when 7
-
+      puts '7 your methods'
     when 8
+      puts '8 your methods'
+    else
+      third_list(num)
+    end
+  end
 
+  def third_list(num)
+    case num.to_i
     when 9
-
+      puts '9 your methods'
     when 10
-
+      puts '10 your methods'
     when 11
-      store.list_Add a music album
+      puts '11 your methods'
     when 12
-
+      puts '12 your methods'
     when 13
-
+      puts '13 your methods'
     end
   end
 end

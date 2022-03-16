@@ -1,4 +1,5 @@
 require_relative '../book'
+require_relative '../item'
 
 describe Book do
   context 'It should create book and add publisher name and date of publication' do

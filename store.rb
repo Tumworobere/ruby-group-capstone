@@ -2,7 +2,6 @@ require 'json'
 require './helper'
 
 class Store
-<<<<<<< HEAD
   def self.read_convert(filename)
     JSON.parse(File.read(filename))
   end
@@ -24,15 +23,16 @@ class Store
   def self.list_all_games
     Helper.create_file_if_not_exist('game.json')
     all_games = read_convert('game.json')
-    all_games.each { |game| puts "Multiplayer: \"#{game['multiplayer']}\" Last playing date: #{game['last_played_at']}" }
+    all_games.each do |game|
+      puts "Multiplayer: \"#{game['multiplayer']}\" Last playing date: #{game['last_played_at']}"
+    end
   end
 
   def self.list_all_authors
     Helper.create_file_if_not_exist('author.json')
     all_games = read_convert('author.json')
-    all_games.each { |author| puts "Id: \"#{author['id']}\" | Full name: #{author['first_name']} #{author['last_name']} | number of items: #{author['items'].length}" }
+    all_games.each do |author|
+      puts "#{author['first_name']} #{author['last_name']}"
+    end
   end
 end
-=======
-end
->>>>>>> development

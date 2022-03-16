@@ -8,11 +8,7 @@ class Item
     @publish_date = Date.parse(publish_date)
     @archived = false
   end
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> development
   def add_genre(genre)
     @genre = genre
     genre.items << self

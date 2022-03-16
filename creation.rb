@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 require './game'
 require './store'
 
@@ -14,10 +13,6 @@ class Creation
     last_played_at = gets.chomp
     game = Game.new(multiplayer, last_played_at)
     Store.push(game)
-    success("game")
+    success('game')
   end
 end
-=======
-class Creation
-end
->>>>>>> development

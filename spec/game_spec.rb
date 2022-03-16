@@ -2,7 +2,6 @@ require_relative '../game'
 require_relative '../item'
 require 'date'
 
-
 describe Game do
   before :each do
     @game = Game.new('Azeem', '2022/5/1')
@@ -31,7 +30,7 @@ describe Game do
     end
 
     it 'the type of last_played_at should be Date' do
-      expect(@game.last_played_at.instance_of? Date).to eq true
+      expect(@game.last_played_at.instance_of?(Date)).to eq true
     end
 
     it 'should be able to write last_played_at instance variable' do
@@ -40,11 +39,9 @@ describe Game do
     end
   end
 
-
-
   context 'mothods ' do
     it 'musnt have access for can_be_archived? method' do
-      expect{ @author.id }.to raise_exception(NoMethodError)
+      expect { @author.id }.to raise_exception(NoMethodError)
     end
   end
 end

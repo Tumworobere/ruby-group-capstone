@@ -34,9 +34,9 @@ describe Author do
     end
   end
 
-  context 'private instances' do 
+  context 'private instances' do
     it 'musnt access to id' do
-      expect{ @author.id }.to raise_exception(NoMethodError)
+      expect { @author.id }.to raise_exception(NoMethodError)
     end
 
     it 'should access to items instance variable' do
@@ -44,14 +44,14 @@ describe Author do
     end
 
     it 'musnt write to items instance variable' do
-      @author.items << "2022/2/2"
-      expect{ @author.id }.to raise_exception(NoMethodError)
+      @author.items << '2022/2/2'
+      expect { @author.id }.to raise_exception(NoMethodError)
     end
   end
 
   context 'methods' do
     it 'add_item method shouldnt return anything' do
-      expect(@author.add_item("2022/2/2")[0]).to be_instance_of Item
+      expect(@author.add_item('2022/2/2')[0]).to be_instance_of Item
     end
   end
 end

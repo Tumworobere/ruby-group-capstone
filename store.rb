@@ -16,3 +16,4 @@ class Store
           puts "Name: #{genre.name}"
         end
     end
+   end

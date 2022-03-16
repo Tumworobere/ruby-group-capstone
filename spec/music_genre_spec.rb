@@ -1,5 +1,5 @@
-require './ruby_classes/music_genre'
-require './ruby_classes/item'
+require './music_genre'
+require './item'
 
 describe Genre do
   context 'It should create genre and add items' do

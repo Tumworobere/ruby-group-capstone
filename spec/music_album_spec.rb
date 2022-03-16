@@ -1,4 +1,4 @@
-require './ruby_classes/music_album'
+require './music_album'
 
 describe MusicAlbum do
   context 'When MusicAlbum is on_spotity to true' do

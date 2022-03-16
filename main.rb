@@ -41,16 +41,7 @@ class Main
     when 3
       puts '3 your methods'
     when 4
-<<<<<<< HEAD
-<<<<<<< HEAD
-      puts '4 your methods'
-=======
       Store.list_all_games
->>>>>>> 7ef2ba333324ecb72a3c4a326bc8508cd1a3fd7e
-=======
-      puts '4 your methods'
-      Store.list_all_games
->>>>>>> 220b6f734e8c99f48854df794d37b891ef2c1bb8
     else
       second_list(num)
     end
@@ -63,16 +54,7 @@ class Main
     when 6
       puts '6 your methods'
     when 7
-<<<<<<< HEAD
-<<<<<<< HEAD
-      puts '7 your methods'
-=======
       Store.list_all_authors
->>>>>>> 7ef2ba333324ecb72a3c4a326bc8508cd1a3fd7e
-=======
-      puts '7 your methods'
-      Store.list_all_authors
->>>>>>> 220b6f734e8c99f48854df794d37b891ef2c1bb8
     when 8
       puts '8 your methods'
     else

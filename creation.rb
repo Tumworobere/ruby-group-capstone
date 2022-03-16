@@ -2,6 +2,10 @@ require_relative './book'
 require_relative './label'
 
 class Creation
+  def self.success(item)
+    puts "#{item} created succesfully!"
+  end
+
   def add_book
     print 'Please, type the book title: '
     title = gets.chomp

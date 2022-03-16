@@ -4,7 +4,7 @@ require 'date'
 
 module BooksController
   def load_books
-    file = './data_files/books.json'
+    file = './books.json'
     data = []
     if File.exist?(file) && File.read(file) != ''
       JSON.parse(File.read(file)).each do |element|
@@ -20,6 +20,6 @@ module BooksController
       data.push({ id: book.id, name: book.name, publisher: book.publisher, cover_state: book.cover_state,
                   publish_date: book.publish_date })
     end
-    File.write('./data_files/books.json', JSON.generate(data))
+    File.write('./books.json', JSON.generate(data))
   end
 end

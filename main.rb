@@ -41,7 +41,11 @@ class Main
     when 3
       puts '3 your methods'
     when 4
+<<<<<<< HEAD
       puts '4 your methods'
+=======
+      Store.list_all_games
+>>>>>>> 7ef2ba333324ecb72a3c4a326bc8508cd1a3fd7e
     else
       second_list(num)
     end
@@ -54,7 +58,11 @@ class Main
     when 6
       puts '6 your methods'
     when 7
+<<<<<<< HEAD
       puts '7 your methods'
+=======
+      Store.list_all_authors
+>>>>>>> 7ef2ba333324ecb72a3c4a326bc8508cd1a3fd7e
     when 8
       puts '8 your methods'
     else
@@ -73,7 +81,11 @@ class Main
     when 12
       puts '12 your methods'
     when 13
+<<<<<<< HEAD
       puts '13 your methods'
+=======
+      Creation.create_a_game
+>>>>>>> 7ef2ba333324ecb72a3c4a326bc8508cd1a3fd7e
     end
   end
 end

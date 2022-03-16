@@ -16,4 +16,7 @@ class Store
           puts "Name: #{genre.name}"
         end
     end
+<<<<<<< HEAD
     
+=======
+>>>>>>> 7ef2ba333324ecb72a3c4a326bc8508cd1a3fd7e

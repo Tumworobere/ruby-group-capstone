@@ -69,6 +69,9 @@ class Store
     puts 'Genres'
     @genres.each do |genre|
       puts "Name: #{genre.name}"
+    end
+  end
+    
   def self.list_all_games
     Helper.create_file_if_not_exist('game.json')
     all_games = read_convert('game.json')

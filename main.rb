@@ -37,7 +37,7 @@ class Main
     when 1
       Store.list_books
     when 2
-      puts '2 your methods'
+      Store.list_all_music_album
     when 3
       puts '3 your methods'
     when 4
@@ -50,9 +50,9 @@ class Main
   def second_list(num)
     case num.to_i
     when 5
-      Store.list_labels
+      Store.list_all_genres
     when 6
-      puts '6 your methods'
+      Store.list_labels
     when 7
       Store.list_all_authors
     when 8

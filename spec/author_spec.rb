@@ -1,7 +1,7 @@
 require_relative '../author'
 require_relative '../item'
 
-describe Author do
+describe 'Author' do
   before :each do
     @author = Author.new('Tumworobere', 'Annah')
   end

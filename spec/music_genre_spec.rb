@@ -1,17 +1,19 @@
-require './ruby_classes/music_genre'
-require './ruby_classes/item'
+require './music_genre'
+require './item'
 
 describe Genre do
+  before :each do
+    @new_genre = Genre.new('Comedy')
+  end
+
   context 'It should create genre and add items' do
-    new_genre = Genre.new(id: 1, name: 'Comedy')
     it 'Should return an instance of Genre' do
-      expect(new_genre.name).to eq 'Comedy'
+      expect(@new_genre.name).to eq 'Comedy'
     end
 
-    it 'should add the input item to the collection of items' do
-      item = Item.new(id: nil, publish_date: Time.new(2021, 1, 1))
-      new_genre.add_item(item)
-      expect(new_genre.items.length).to eq 1
+    it 'should add the input item and yourself in Item class version to the collection of items' do
+      @new_genre.add_item('2021/1/19')
+      expect(@new_genre.items.length).to eq 2
     end
   end
 end

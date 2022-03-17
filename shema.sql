@@ -16,6 +16,23 @@ CREATE TABLE "Genre"(
 );
 ALTER TABLE
     "Genre" ADD PRIMARY KEY("id");
+
+CREATE TABLE "Label"(
+    "id" INTEGER NOT NULL,
+    "title" TEXT NOT NULL,
+    "colors" TEXT NOT NULL,
+    "items" TEXT NOT NULL
+);
+ALTER TABLE
+    "Label" ADD PRIMARY KEY("id");
+CREATE TABLE "Book"(
+    "publisher" INTEGER NOT NULL,
+    "cover_state" TEXT NOT NULL
+);
+ALTER TABLE
+    "Book" ADD CONSTRAINT "book_publisher_foreign" FOREIGN KEY("publisher") REFERENCES "item"("id");
+ALTER TABLE
+    "item" ADD CONSTRAINT "item_label_foreign" FOREIGN KEY("label") REFERENCES "Label"("id");
 CREATE TABLE "Author"(
     "id" INTEGER NOT NULL,
     "first_name" TEXT NOT NULL,
@@ -53,3 +70,4 @@ ALTER TABLE
     "item" ADD CONSTRAINT "item_label_foreign" FOREIGN KEY("label") REFERENCES "Label"("id");
 ALTER TABLE
     "Music Album" ADD CONSTRAINT "music album_on_spotify_foreign" FOREIGN KEY("on_spotify") REFERENCES "item"("id");
+    "item" ADD CONSTRAINT "item_author_foreign" FOREIGN KEY("author") REFERENCES "Author"("id");

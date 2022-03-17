@@ -2,6 +2,13 @@ require 'json'
 require './helper'
 
 class Store
+  def list_all_music_album
+    puts 'Music Albums'
+    @music_albums.each do |music_album|
+      puts "Name: #{music_album.name}, Publish Date: #{music_album.publish_date}, On Spotify: #{music_album.on_spotify}"
+    end
+  end
+
   def self.read_convert(filename)
     JSON.parse(File.read(filename))
   end
@@ -61,6 +68,13 @@ class Store
     all_games = read_convert('author.json')
     all_games.each do |author|
       puts "#{author['first_name']} #{author['last_name']}"
+    end
+  end
+
+  def list_all_genres
+    puts 'Genres'
+    @genres.each do |genre|
+      puts "Name: #{genre.name}"
     end
   end
 end

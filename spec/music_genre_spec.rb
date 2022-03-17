@@ -12,7 +12,7 @@ describe Genre do
     end
 
     it 'should add the input item and yourself in Item class version to the collection of items' do
-      @new_genre.add_item("2021/1/19")
+      @new_genre.add_item('2021/1/19')
       expect(@new_genre.items.length).to eq 2
     end
   end

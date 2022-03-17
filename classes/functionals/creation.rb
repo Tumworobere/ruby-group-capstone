@@ -1,27 +1,29 @@
-require_relative './music_album'
-require_relative './music_genre'
-require_relative './book'
-require_relative './label'
-require './game'
-require './store'
+require './classes/items/music_album'
+require './classes/items/book'
+require './classes/items/game'
+require './classes/others/music_genre'
+require './classes/others/label'
+require './classes/functionals/store'
 
 class Creation
   def self.success(item)
     puts "#{item} created succesfully!"
   end
-  def add_music_album
+
+  def self.add_music_album
     print 'Please, type the album name: '
     name = gets.chomp
 
     print 'Date of publish [Enter date in format (yyyy-mm-dd)]: '
-    publish_date = get_date_from_user(gets.chomp)
+    publish_date = gets.chomp
     return unless publish_date
 
     print 'Has present in spotify? [Y/N]: '
     on_spotify = gets.chomp.downcase == 'y' || false
 
-    @music_albums << MusicAlbum.new(name, publish_date, on_spotify)
-    puts 'Album created successfully'
+    music_album = MusicAlbum.new(name, publish_date, on_spotify)
+    Store.push(music_album)
+    success('Music album')
   end
 
   def self.add_book
@@ -41,19 +43,19 @@ class Creation
   end
 
   def self.add_label
-    print 'Label Name:'
+    print 'Label Name: '
     title = gets.chomp
-    print 'Label Color:'
+    print 'Label Color: '
     color = gets.chomp
     label = Label.new(title, color)
     Store.push(label)
-    success("label")
+    success('label')
   end
 
   def self.create_a_game
-    print 'multiplayer'
+    print 'Multiplayer: '
     multiplayer = gets.chomp
-    print 'Last playing Date (yyyy/mm/dd): '
+    print 'Last playing Date (yyyy-mm-dd): '
     last_played_at = gets.chomp
     game = Game.new(multiplayer, last_played_at)
     Store.push(game)

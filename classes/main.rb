@@ -1,6 +1,6 @@
-require './item'
-require './store'
-require './creation'
+require './classes/items/item'
+require './classes/functionals/store'
+require './classes/functionals/creation'
 
 class Main
   def initialize
@@ -14,7 +14,7 @@ class Main
     loop do
       menu
       option = gets.chomp
-      break if option == '14'
+      break if option == '11'
 
       list(option)
     end
@@ -24,12 +24,12 @@ class Main
 
   def menu
     puts
-    puts 'Please choose an option by entering a number', '1 - List all books', '2 - List all music albums',
-         '3 - List all movies', '4 - List all games', '5 - List all genre (eg.: Comedy, Thriller)',
-         '6 - List all labels (eg.: Gift, New)', '7 - List all authors (e.g. Stephen King)',
-         "8 - List all sources (e.g. 'From a friend', 'Online shop')", '9 - Add a label',
-         '10 - Add a book', '11 - Add a music album', '12 - Add a movie', '13 - Add a game',
-         '14 - Exit'
+    puts 'Please choose an option by entering a number',
+         '1 - List all books', '2 - List all music albums', '3 - List all games',
+         '4 - List all genre (eg.: Comedy, Thriller)', '5 - List all labels (eg.: Gift, New)',
+         '6 - List all authors (e.g. Stephen King)',
+         '7 - Add a label', '8 - Add a book', '9 - Add a music album', '10 - Add a game',
+         '11 - Exit'
   end
 
   def list(num)
@@ -37,11 +37,13 @@ class Main
     when 1
       Store.list_books
     when 2
-      puts '2 your methods'
+      Store.list_all_music_albums
     when 3
-      puts '3 your methods'
-    when 4
       Store.list_all_games
+    when 4
+      Store.list_all_genres
+    when 5
+      Store.list_labels
     else
       second_list(num)
     end
@@ -49,31 +51,28 @@ class Main
 
   def second_list(num)
     case num.to_i
-    when 5
-      puts '6 your methods'
     when 6
-      Store.list_labels
-    when 7
       Store.list_all_authors
+    when 7
+      Creation.add_label
     when 8
-      puts '8 your methods'
-    else
-      third_list(num)
+      Creation.add_book
+    when 9
+      Creation.add_music_album
+    when 10
+      Creation.create_a_game
     end
   end
 
   def third_list(num)
     case num.to_i
     when 9
-      Creation.add_label
     when 10
-      Creation.add_book
     when 11
       puts '11 your methods'
     when 12
       puts '12 your methods'
     when 13
-      Creation.create_a_game
     end
   end
 end

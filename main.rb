@@ -50,9 +50,9 @@ class Main
   def second_list(num)
     case num.to_i
     when 5
-      Store.list_labels
-    when 6
       puts '6 your methods'
+    when 6
+      Store.list_labels
     when 7
       Store.list_all_authors
     when 8
@@ -65,9 +65,9 @@ class Main
   def third_list(num)
     case num.to_i
     when 9
-      Store.add_label
+      Creation.add_label
     when 10
-      Store.add_book
+      Creation.add_book
     when 11
       puts '11 your methods'
     when 12

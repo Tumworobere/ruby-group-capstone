@@ -41,16 +41,36 @@ class Store
     books = read_convert('books.json')
     puts 'There are no books yet! Please add books.' if books.empty?
     books.each do |book|
-      puts "Title: #{book.name}, Publish Date: #{book.publish_date}, cover_state: #{book.cover_state}"
+      puts "Title: #{book["name"]}, Publish Date: #{book["publish_date"]}, cover_state: #{book["cover_state"]}"
     end
   end
 
-  def list_labels
-    Helper.create_file_if_not_exist('labes.json')
-    labels = read_convert('labes.json')
-    puts 'There are no labels yet!' if @labels.empty?
+  def self.list_labels
+    Helper.create_file_if_not_exist('labels.json')
+    labels = read_convert('labels.json')
+    puts 'There are no labels yet!' if labels.empty?
     labels.each do |label|
-      puts "Label name: #{label.title}"
+      puts "Label name: #{label["title"]}"
+    end
+  end
+
+  def self.push(item)
+    case item.class.name
+    when 'Game'
+      Helper.create_file_if_not_exist('game.json')
+      json_to_arr = read_convert('game.json')
+      json_to_arr.push({ 'multiplayer' => item.multiplayer, 'last_played_at' => item.last_played_at })
+      write_json('game.json', json_to_arr)
+    when 'Label'
+      Helper.create_file_if_not_exist('labels.json')
+      json_to_arr = read_convert('labels.json')
+      json_to_arr.push({ 'title' => item.title, 'color' => item.color })
+      write_json('labels.json', json_to_arr)
+    when 'Book'
+      Helper.create_file_if_not_exist('books.json')
+      json_to_arr = read_convert('books.json')
+      json_to_arr.push({ 'publisher' => item.publisher, 'cover_state' => item.cover_state, 'publish_date' => item.publish_date })
+      write_json('books.json', json_to_arr)
     end
   end
 

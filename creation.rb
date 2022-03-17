@@ -8,10 +8,7 @@ class Creation
     puts "#{item} created succesfully!"
   end
 
-  def add_book
-    print 'Please, type the book title: '
-    title = gets.chomp
-
+  def self.add_book
     print 'Please, type the book publisher: '
     publisher = gets.chomp
 
@@ -22,15 +19,19 @@ class Creation
     publish_date = gets.chomp
     return unless publish_date
 
-    @books.push(Book.new(title, publisher, cover_state, publish_date))
+    book = Book.new(publisher, cover_state, publish_date)
+    Store.push(book)
     puts 'Book created successfully'
   end
 
-  def add_label
-    print 'Create Label:'
+  def self.add_label
+    print 'Label Name:'
     title = gets.chomp
-    @labels.push(Label.new(title))
-    puts 'Label created successfully'
+    print 'Label Color:'
+    color = gets.chomp
+    label = Label.new(title, color)
+    Store.push(label)
+    success("label")
   end
 
   def self.create_a_game

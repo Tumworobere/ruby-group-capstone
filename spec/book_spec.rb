@@ -3,7 +3,7 @@ require_relative '../item'
 
 describe Book do
   context 'It should create book and add publisher name and date of publication' do
-    book = Book.new(1, 'azeem', 'bad', '2020-04-7')
+    book = Book.new('azeem', 'bad', '2020-04-7')
     it 'creates new book with the given parameters' do
       expect(book).to be_an_instance_of Book
     end

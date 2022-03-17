@@ -20,7 +20,7 @@ class Creation
     @music_albums << MusicAlbum.new(name, publish_date, on_spotify)
     puts 'Album created successfully'
   end
-  
+
   def add_book
     print 'Please, type the book title: '
     title = gets.chomp

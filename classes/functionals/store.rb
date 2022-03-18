@@ -4,8 +4,8 @@ require './classes/functionals/helper'
 class Store
   def self.read_convert(filename)
     Helper.create_file_if_not_exist(filename)
-    data = JSON.parse(File.read('./db/'+filename))
-    filename_without_extension = filename.sub(/.json/,'')
+    data = JSON.parse(File.read("./db/#{filename}"))
+    filename_without_extension = filename.sub(/.json/, '')
     puts "There are no #{filename_without_extension} yet! Please add #{filename_without_extension}." if data.empty?
     data
   end
@@ -24,11 +24,11 @@ class Store
       save_database('labels.json', data)
     when 'Book'
       data = { 'publisher' => item.publisher, 'cover_state' => item.cover_state,
-        'publish_date' => item.publish_date }
+               'publish_date' => item.publish_date }
       save_database('books.json', data)
     when 'MusicAlbum'
       data = { 'name' => item.name, 'on_spotify' => item.on_spotify,
-        'publish_date' => item.publish_date }
+               'publish_date' => item.publish_date }
       save_database('music-albums.json', data)
     end
   end
@@ -71,13 +71,15 @@ class Store
   def self.list_all_music_albums
     music_albums = read_convert('music-albums.json')
     music_albums.each do |music_album|
-      puts "Name: #{music_album['name']}, Publish Date: #{music_album['publish_date']}, On Spotify: #{music_album['on_spotify']}"
+      puts "Name: #{music_album['name']},
+       Publish Date: #{music_album['publish_date']},
+       On Spotify: #{music_album['on_spotify']}"
     end
   end
 
   def self.save_database(filename, data)
     json_to_arr = read_convert(filename)
     json_to_arr.push(data)
-    write_json('./db/'+filename, json_to_arr)
+    write_json("./db/#{filename}", json_to_arr)
   end
 end

@@ -63,18 +63,6 @@ class Main
       Creation.create_a_game
     end
   end
-
-  def third_list(num)
-    case num.to_i
-    when 9
-    when 10
-    when 11
-      puts '11 your methods'
-    when 12
-      puts '12 your methods'
-    when 13
-    end
-  end
 end
 
 execute_app = Main.new

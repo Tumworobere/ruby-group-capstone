@@ -1,5 +1,5 @@
-require_relative '../author'
-require_relative '../item'
+require './classes/others/author'
+require './classes/items/item'
 
 describe 'Author' do
   before :each do

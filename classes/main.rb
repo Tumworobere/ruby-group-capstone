@@ -10,7 +10,7 @@ class Main
   def run
     puts '*************CATALOGUE OF MY THINGS************'
     puts '             =======================          '
-    puts 'Welcome to Catalogue of thi!'
+    puts 'Welcome to Catalogue of things!'
     loop do
       menu
       option = gets.chomp

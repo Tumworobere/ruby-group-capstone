@@ -1,4 +1,4 @@
-require './music_album'
+require './classes/items/music_album'
 
 describe MusicAlbum do
   context 'When MusicAlbum is on_spotity to true' do

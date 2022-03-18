@@ -1,4 +1,4 @@
-require_relative '../label'
+require './classes/others/label'
 
 describe Label do
   context 'It should create label and add publisher name and date of publication' do

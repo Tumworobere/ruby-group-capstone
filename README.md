@@ -1,5 +1,5 @@
 # ruby-group-capstone
-
+> ruby-group-capstone is a command line App that lets you add an item which can be a book, game, or music album. 
 ## Built With
 
 - Ruby
@@ -32,21 +32,21 @@ Not required
 
 👤 **Furkan Denizhan**
 
-- GitHub: [https://github.com/nevisende]
-- Twitter: [https://twitter.com/nevisen_de]
-- LinkedIn: [https://www.linkedin.com/in/furkan-denizhan]
+- GitHub: [nevisende](https://github.com/nevisende)
+- Twitter: [nevisen_de](https://twitter.com/nevisen_de)
+- LinkedIn: [furkan-denizhan](https://www.linkedin.com/in/furkan-denizhan)
 
 👤 **Azeem Olatunji**
 
-- GitHub: [https://github.com/zemola]
-- Twitter: [https://twitter.com/zemolat]
-- LinkedIn: [https://www.linkedin.com/in/olatunjiazeem]
+- GitHub: [zemola](https://github.com/zemola)
+- Twitter: [@zemolat](https://twitter.com/zemolat)
+- LinkedIn: [olatunjiazeem]([https://www.linkedin.com/in/olatunjiazeem)
 
 👤 **ANNAH TUMWOROBERE**
 
-- GitHub: [@githubhandle](https://github.com/Tumworobere)
+- GitHub: [Tumworobere](https://github.com/Tumworobere)
 - Twitter: [@twitterhandle](https://twitter.com/Tannah2090)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/annah-tumworobere)
+- LinkedIn: [annah-tumworobere](https://linkedin.com/in/annah-tumworobere)
 
 ## Show your support
 
